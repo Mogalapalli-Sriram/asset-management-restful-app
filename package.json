@@ -9,6 +9,16 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "express": "^4.17.1"
-  }
+    "express": "^4.17.1",
+    "express.js": "^1.0.0"
+  },
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SRIRAM-MOGALAPALLI/restful-api-tshirt-.git"
+  },
+  "bugs": {
+    "url": "https://github.com/SRIRAM-MOGALAPALLI/restful-api-tshirt-/issues"
+  },
+  "homepage": "https://github.com/SRIRAM-MOGALAPALLI/restful-api-tshirt-#readme"
 }
