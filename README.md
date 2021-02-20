@@ -21,21 +21,17 @@ The code is about using RESTful API's from scratch by which we can render the da
 
 ## How to run the app
 
-1. Initialise the npm.
-
-![initialise npm](images/initialisenpm.PNG)
-
-2. Install the npm.
+1. Install the npm.
 
 ![install npm](images/installnpms.PNG)
 
-3. Start the server 
+2. Start the server 
 
 ![starting the server](images/serverstart.PNG)
 
-4. You can access the app at http://localhost:3000
+3. You can access the app at http://localhost:3000
 
-5. Use the API client [insomnia](https://insomnia.rest/) to generate the HTTP request verbs.
+4. Use the API client [insomnia](https://insomnia.rest/) to generate the HTTP request verbs.
 
 
 
