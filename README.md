@@ -23,20 +23,22 @@ The code is about using RESTful API's from scratch by which we can render the da
 
 ## How to run the app
 
-1. Install the npm.
-
-![install npm](images/installnpms.PNG)
+1. Install the npm's.
+```npm
+npm i express body-parser mongoose
+```
 
 2. Start the server.
-
-![starting the server](images/serverstart.PNG)
+```start
+node app.js
+```
 
 3. You can access the app at http://localhost:3000
 
-4. Download,Install MongoDB and Start the Mongo server(It is hosted on port 27017).
+4. Download,Install MongoDB and Start the Mongo server (It is hosted on port 27017).
 
 
-5. Use the API client [postman](https://insomnia.rest/) to generate the HTTP request verbs.
+5. Use the API client [postman](https://www.postman.com/downloads/) to generate the HTTP request verbs.
 
 
 
@@ -44,35 +46,98 @@ The code is about using RESTful API's from scratch by which we can render the da
 
 I have made use of the all the request verbs of HTTP(API's) to perform the CRUD operations for the main route and specific route .The list of all API's I have used are shown below.
 
-### Get All Tshirt
+### Get All Tshirts
+```curl
+curl http://localhost:3000/tshirts
+```
 
-![curlgetall](images/getallcurl.PNG)
-![getallresult](images/getallresult.PNG)
+```get
+{
+    "success": "true",
+    "data": [
+        {
+            "_id": "60325d572d94ce1d5c7d0e2f",
+            "tshirt": "us-polo",
+            "size": "medium",
+            "__v": 0
+        },
+        {
+            "_id": "6032875e100e2c1a7ccd0783",
+            "tshirt": "buffalo",
+            "size": "medium",
+            "__v": 0
+        }
+    ]
+}
 
+```
 ### Create Tshirt
 
-![curlpost](images/curlpost.PNG)
-![postresult](images/resultpost.PNG)
+```curl
+curl -X POST -H "Content-Type : application/json" -H "accept : application/json" -d '{"tshirt" : "wrangler", "size": "medium" }' http://localhost:3000/tshirts
+```
+
+```post
+{
+    "success": "true",
+    "data": {
+        "tshirt": "wrangler",
+        "size": "medium"
+    }
+}
+```
 
 ### Get Specific Tshirt
 
-![getcurlone](images/getspecificcurl.PNG)
-![getresultone](images/getspecificresult.PNG)
+```curl
+curl http://localhost:3000/tshirts/us-polo
+```
+
+```getspeicfic
+{
+    "success": "true",
+    "data": {
+        "_id": "60325d572d94ce1d5c7d0e2f",
+        "tshirt": "us-polo",
+        "size": "medium",
+        "__v": 0
+    }
+}
+```
+
 
 ### Update Entire Tshirt
 
-![putcurl](images/putrequestcurl.PNG)
-![putresult](images/putrequestresult.PNG)
+```curl
+curl -X PUT -H "Content-Type : application/json" -H "accept : application/json" -d '{"tshirt" : "killer", "size": "small" }' http://localhost:3000/tshirts/buffalo
+```
+
+```put
+Successfully updated the entire document
+```
 
 ### Update part of Tshirt Document
 
-![patchcurl](images/patchrequestcurl.PNG)
-![patchresult](images/patchrequestresult.PNG)
+```curl
+curl -X PATCH -H "Content-Type : application/json" -H "accept : application/json" -d '{"tshirt" : "peter england", "size": "large" }' http://localhost:3000/tshirts/us-polo
+```
+
+```patch
+{
+    "success": "true",
+    "message": "updated the part of document"
+}
+```
 
 ### Remove Tshirt
 
-![deletecurl](images/deleterequestcurl.PNG)
-![deleteresult](images/deleterequestresponse.PNG)
+```curl
+curl -X DELETE http://localhost:3000/tshirts/wrangler
+```
+
+```delete
+removed the item
+```
 
 ## Accessing the API's
 
