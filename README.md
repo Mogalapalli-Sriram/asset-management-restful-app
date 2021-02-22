@@ -49,7 +49,7 @@ curl http://localhost:3000/tshirts
 
 ```json
 {
-    "success": "true",
+    "success": true,
     "data": [
         {
             "_id": "6032b0f87e44bd2544bd77a1",
@@ -80,7 +80,7 @@ curl -X POST  http://localhost:3000/tshirts
 
 ```json
 {
-    "success": "true",
+    "success": true,
     "data": {
         "_id": "60336bd4110a10106475b642",
         "tshirt": "us-polo",
@@ -99,7 +99,7 @@ curl http://localhost:3000/tshirts/6032b0f87e44bd2544bd77a1
 
 ```json
 {
-    "success": "true",
+    "success": true,
     "data": {
         "_id": "6032b0f87e44bd2544bd77a1",
         "tshirt": "peter england",
@@ -133,7 +133,7 @@ curl -X PATCH  http://localhost:3000/tshirts/6032b0f87e44bd2544bd77a1
 ```json
 {
     {
-    "success": "true",
+    "success": true,
     "data": {
         "_id": "6032b0f87e44bd2544bd77a1",
         "tshirt": "peter england",
