@@ -17,24 +17,24 @@ This application is about making CRUD operations for tshirts.
 ## Setup
 1. Clone the repository 
 
-```clone
+```bash
 git clone https://github.com/SRIRAM-MOGALAPALLI/asset-management-restful-app.git restfulApi
 ```
 2. Change over to the restfulApi directory.
 
-```cd
+```bash
 cd restfulApi
 ```
 
-3. Install the npm.
-```npm
-npm i express body-parser mongoose
+3. Install dependencies.
+```bash
+npm install
 ```
 <br>
 
 ## How to run the app
 1. Start the server.
-```start
+```bash
 node app.js
 ```
 2. You can access the app at http://localhost:3000
@@ -43,11 +43,11 @@ node app.js
 
 ## API's  
 ### Get all the Tshirts
-```curl
+```bash
 curl http://localhost:3000/tshirts
 ```
 
-```get
+```json
 {
     "success": "true",
     "data": [
@@ -71,14 +71,14 @@ curl http://localhost:3000/tshirts
 ```
 ### Create a Tshirt
 
-```curl
+```bash
 curl -X POST  http://localhost:3000/tshirts 
 -H "Content-type : application/json" 
 -H "accept : application/json" 
 -d "{\"tshirt\" : \"us-polo\" , \"size\" : \"small\" , \"price\" : \"599 \" }"
 ```
 
-```post
+```json
 {
     "success": "true",
     "data": {
@@ -93,11 +93,11 @@ curl -X POST  http://localhost:3000/tshirts
 
 ### Get a Tshirt by Id
 
-```curl
+```bash
 curl http://localhost:3000/tshirts/6032b0f87e44bd2544bd77a1
 ```
 
-```getspeicfic
+```json
 {
     "success": "true",
     "data": {
@@ -123,14 +123,14 @@ Successfully updated the entire document
 
 ### Update a Tshirt 
 
-```curl
+```bash
 curl -X PATCH  http://localhost:3000/tshirts/6032b0f87e44bd2544bd77a1 
 -H "Content-type : application/json" 
 -H "accept : application/json" 
 -d "{\"price\" : \"900\" }"
 ```
 
-```patch
+```json
 {
     {
     "success": "true",
@@ -147,11 +147,11 @@ curl -X PATCH  http://localhost:3000/tshirts/6032b0f87e44bd2544bd77a1
 
 ### Remove a Tshirt 
 
-```curl
+```bash
 curl -X DELETE http://localhost:3000/tshirts/603367d8110a10106475b640
 ```
 
-```delete
+```json
 {
     "success":true,
     "message":"removed a tshirt with id: 603367d8110a10106475b640"

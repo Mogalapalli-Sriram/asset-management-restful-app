@@ -22,7 +22,7 @@ app.get("/tshirts", function(req, res) {
   Tshirt.find(function(err, findItems) {
     if (findItems) {
       res.send({
-        "success": "true",
+        "success": true,
         "data": findItems
       });
     } else {
@@ -43,7 +43,7 @@ app.post("/tshirts", function(req, res) {
       res.send("error");
     } else {
       res.send({
-        "success": "true",
+        "success": true,
         "data": newTshirt
       });
     }
@@ -58,7 +58,7 @@ app.get("/tshirts/:shirtId", function(req, res) {
   }, function(err, findItem) {
     if (findItem) {
       res.send({
-        "success": "true",
+        "success": true,
         "data": findItem
       });
     } else {
@@ -102,7 +102,7 @@ app.patch("/tshirts/:shirtId", function(req, res) {
     function(err,result) {
       if (!err) {
         res.send( {
-          "success":"true",
+          "success":true,
           "data" : result
         });
       } else {
