@@ -132,7 +132,7 @@ curl -X PATCH  http://localhost:3000/tshirts/6032b0f87e44bd2544bd77a1
 
 ```json
 {
-    {
+    
     "success": true,
     "data": {
         "_id": "6032b0f87e44bd2544bd77a1",
@@ -141,7 +141,7 @@ curl -X PATCH  http://localhost:3000/tshirts/6032b0f87e44bd2544bd77a1
         "__v": 0,
         "price": 900
     }
-}
+
 }
 ```
 
