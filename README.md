@@ -18,15 +18,15 @@ This application is about making CRUD operations for tshirts.
 1. Clone the repository 
 
 ```clone
-git clone https://github.com/SRIRAM-MOGALAPALLI/restful-api.git <directory name>
+git clone https://github.com/SRIRAM-MOGALAPALLI/asset-management-restful-app.git restfulApi
 ```
-2. Change over to that new directory name.
+2. Change over to the restfulApi directory.
 
 ```cd
-cd <directory name>
+cd restfulApi
 ```
 
-2. Install the npm's.
+3. Install the npm.
 ```npm
 npm i express body-parser mongoose
 ```
